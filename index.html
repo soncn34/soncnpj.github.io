@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>FRUIT</title>
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large" onclick="closeRightMenu()">Close &times;</button>
+        <p class="text-center fs-1">GIỎ HÀNG</p>
+        <div class="cart-row">
+            <p class="cart-item cart-header cart-column">Sản Phẩm</p>
+            <p class="cart-price cart-header cart-column">Giá</p>
+            <p class="cart-quantity cart-header cart-column">Số Lượng</p>
+        </div>
+        <div class="cart-items">
+            <!-- <div class="cart-row">
+                <div class="cart-item cart-column">
+                    <img class="cart-item-image" src="./image/cherry_my.jpeg" width="100" height="100">
+                    <span class="cart-item-title">Cherry Mỹ</span>
+                </div>
+                <span class="cart-price cart-column">700000</span>
+                <div class="cart-quantity cart-column">
+                    <input class="cart-quantity-input" type="number" value="0">
+                    <button class="btn btn-danger" type="button">Xóa</button>
+                </div>
+            </div> -->
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Tổng Cộng:</strong>
+            <p class="cart-total-price">0</p>
+        </div>
+    </div>
+
+    <div id="main">
+        <header id="header">
+            <div class="header__content">
+                <p>GẤU'S FRUITS</p>
+                <button class="toggle btn btn-primary" type="button">Dark Mode</button>
+                <nav>
+                    <ul>
+                        <li class="active"><a href="#">HOME</a></li>
+                        <li><a href="#">VỀ CHÚNG TÔI</a></li>
+                        <li><a href="#">DỊCH VỤ</a></li>
+                        <li><a href="#">SẢN PHẨM</a></li>
+                        <li><a href="#">ĐỐI TÁC</a></li>
+                        <li><a href="#">LIÊN HỆ</a></li>
+                    </ul>
+                </nav>
+                <button id="openNav" class="w3-button w3-teal w3-xlarge w3-round w3-dark-grey" onclick="openRightMenu()"><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+
+            <div class="header__mobile">
+                <p>FRUIT</p>
+                <i class="fa-solid fa-bars header__mobile--bar"></i>
+            </div>
+        </header>
+        <section class="w-auto p-3">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./image/banner.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <section>
+            <p class="text-center fs-1">SẢN PHẨM</p>
+            <div class="row row-cols-1 row-cols-md-4 g-4 mx-4 mb-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./image/cherry_my.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title fs-4">Cherry Mỹ</h5>
+                            <p class="card-text fs-5">70000</p>
+                            <div class="addCart align-items-center d-grid gap-2 d-md-flex justify-content-md-center">
+                                <button class="addCart btn btn-primary " type="button">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./image/cherry_vang_my.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title fs-4">Cherry vàng Mỹ</h5>
+                            <p class="card-text fs-5">90000</p>
+                            <div class="addCart align-items-center d-grid gap-2 d-md-flex justify-content-md-center">
+                                <button class="btn btn-primary btnCart" type="button">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./image/bo_hass_uc.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title fs-4">Bơ Hass Úc</h5>
+                            <p class="card-text fs-5">1340000</p>
+                            <div class="addCart align-items-center d-grid gap-2 d-md-flex justify-content-md-center">
+                                <button class="btn btn-primary" type="button">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./image/kiwi_xanh_nz.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title fs-4">Kiwi xanh New Zealand</h5>
+                            <p class="card-text fs-5">700000</p>
+                            <div class="addCart align-items-center d-grid gap-2 d-md-flex justify-content-md-center">
+                                <button class="btn btn-primary" type="button">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./image/tao_ambrosia_new_zealand.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Táo Ambrosia New Zealand</h5>
+                            <p class="card-text">700000</p>
+                            <div class="addCart align-items-center d-grid gap-2 d-md-flex justify-content-md-center">
+                                <button class="btn btn-primary" type="button">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./image/nho_xanh_autumn_crisp_vip_fruitico_uc.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title fs-4">Nho Xanh Autumn Crisp Fruitico Úc</h5>
+                            <p class="card-text fs-5">800000</p>
+                            <div class="addCart align-items-center d-grid gap-2 d-md-flex justify-content-md-center">
+                                <button class="btn btn-primary" type="button">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./image/sau-rieng-com-ri6.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title fs-4">Sầu Riêng Ri 6</h5>
+                            <p class="card-text fs-5">125000</p>
+                            <div class="addCart align-items-center d-grid gap-2 d-md-flex justify-content-md-center">
+                                <button class="btn btn-primary" type="button">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./image/tao-mat-koru-new-zealand.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title fs-4">Táo Mật Koru New Zealand</h5>
+                            <p class="card-text fs-5" id="card-price">79000</p>
+                            <div class="addCart align-items-center d-grid gap-2 d-md-flex justify-content-md-center">
+                                <button class="btn btn-primary" type="button">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="footer-dark">
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3 class="fs-2">Sản Phẩm</h3>
+                        <ul>
+                            <li><a href="#" class="fs-4">Set quà</a></li>
+                            <li><a href="#" class="fs-4">Trái cây nhập khẩu</a></li>
+                            <li><a href="#" class="fs-4">Khác</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3 class="fs-2">Về chúng tôi</h3>
+                        <ul>
+                            <li><a href="#" class="fs-4">Lịch sử</a></li>
+                            <li><a href="#" class="fs-4">Đội ngũ nhân viên</a></li>
+                            <li><a href="#" class="fs-4">Tuyển dụng</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3 class="fs-2">GẤU'S FRUITS</h3>
+                        <p class="fs-4">Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus.
+                            Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit
+                            pulvinar dictum vel in justo.</p>
+                    </div>
+                    <div class="col item social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <p class="copyright fs-4">Company Name © 2023</p>
+            </div>
+        </footer>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script>
+
+    </script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
